@@ -1,0 +1,1 @@
+# AI-sunum-haz-rlama-ai
