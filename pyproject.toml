@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "presentation-ai"
+version = "0.1.0"
+description = "Ürünleri analiz edip otomatik PowerPoint sunumu üretir"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "python-pptx>=0.6.23",
+  "matplotlib>=3.8.0",
+]
+
+[project.scripts]
+presentation-ai = "presentation_ai.cli:main"
+presentation-ai-web = "presentation_ai.web:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
